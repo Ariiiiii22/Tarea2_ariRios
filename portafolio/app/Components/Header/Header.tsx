@@ -1,51 +1,52 @@
 import React from 'react';
 import styles from './Header.module.css';
+import Link from 'next/link';
 
 let HeaderData:String = "Arantza Ilian Ríos Barrera"
 
 export default function Header(){
     return(
-        <header className="header" id="header">
-        <nav className="nav container">
-            <a href="#home" className="nav__logo">
-                <span className="logo__bracket">&lt;</span>TuNombre<span className="logo__bracket">/&gt;</span>
-            </a>
+        <header className={styles.header} id="header">
+        <nav className={`container ${styles.nav}`}>
+            <Link href="#home" className={styles.nav__logo}>
+                <span className={styles.logo__bracket}>&lt;</span>{HeaderData}<span className={styles.logo__bracket}>/&gt;</span>
+            </Link>
             
     
-            <input type="checkbox" id="nav-toggle" className="nav__checkbox" />
-            <label htmlFor="nav-toggle" className="nav__toggle">
+            <input type="checkbox" id="nav-toggle" className={styles.checkbox} />
+            <label htmlFor="nav-toggle" className={styles.nav__toggle}>
                 <i className="fas fa-bars"></i>
             </label>
             
-            <div className="nav__menu" id="nav-menu">
-                <label htmlFor="nav-toggle" className="nav__close">
+            <div className={styles.nav__menu} id="nav-menu">
+                <label htmlFor="nav-toggle" className={styles.nav__close}>
                     <i className="fas fa-times"></i>
                 </label>
                 
-                <ul className="nav__list">
-                    <li className="nav__item">
+                <ul className={styles.nav__list}>
+                    <li className={styles.nav__item}>
                         <label htmlFor="nav-toggle">
-                            <a href="#home" className="nav__link">Inicio</a>
+                            <Link href="#home" className={styles.nav__link}>Inicio</Link>
                         </label>
                     </li>
-                    <li className="nav__item">
+                    <li className={styles.nav__item}>
                         <label htmlFor="nav-toggle">
-                            <a href="#interests" className="nav__link">Intereses</a>
+                            <Link href="#interests" className={styles.nav__link}>Intereses</Link>
                         </label>
                     </li>
-                    <li className="nav__item">
+                    <li className={styles.nav__item}>
                         <label htmlFor="nav-toggle">
-                            <a href="#cv" className="nav__link">CV</a>
+                            <Link href="#cv" className={styles.nav__link}>CV</Link>
                         </label>
                     </li>
-                    <li className="nav__item">
+                    <li className={styles.nav__item}>
                         <label htmlFor="nav-toggle">
-                            <a href="#projects" className="nav__link">Proyectos</a>
+                            <Link href="#projects" className={styles.nav__link}>Proyectos</Link>
                         </label>
                     </li>
-                    <li className="nav__item">
+                    <li className={styles.nav__item}>
                         <label htmlFor="nav-toggle">
-                            <a href="#contact" className="nav__link">Contacto</a>
+                            <Link href="#contact" className={styles.nav__link}>Contacto</Link>
                         </label>
                     </li>
                 </ul>
