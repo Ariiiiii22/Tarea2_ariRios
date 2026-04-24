@@ -116,8 +116,6 @@ export default function Header(){
                     </p>
                 </div>
                 
-                <!-- ERROR 10: Uno de los íconos de redes sociales no tiene la clase correcta para estilos
-                     PISTA: Revisa que todos los enlaces tengan la clase footer__social-link -->
                 <div className="footer__social">
                     <a href="https://linkedin.com/in/tu-perfil" target="_blank" rel="noopener noreferrer" className="footer__social-link" aria-label="LinkedIn">
                         <i className="fab fa-linkedin-in"></i>
