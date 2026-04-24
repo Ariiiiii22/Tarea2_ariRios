@@ -73,13 +73,13 @@ export default function Header(){
             </p>
 
             <div className={styles.hero__buttons}>
-                <a href="#projects" className={`${styles.btn} ${styles['btn--primary']}`}>
+                <Link href="#projects" className={`${styles.btn} ${styles['btn--primary']}`}>
                     <i className="fas fa-rocket"></i> Ver mis proyectos
-                </a>
+                </Link>
 
-                <a href="#contact" className={`${styles.btn} ${styles['btn--outline']}`}>
+                <Link href="#contact" className={`${styles.btn} ${styles['btn--outline']}`}>
                     <i className="fas fa-envelope"></i> Contáctame
-                </a>
+                </Link>
             </div>
         </div>
 
@@ -97,10 +97,10 @@ export default function Header(){
     </div>
 
     <div className={styles.hero__scroll}>
-        <a href="#interests" className={styles.hero__scroll-Link}>
+        <Link href="#interests" className={styles.hero__scroll-Link}>
             <span>Scroll</span>
             <i className="fas fa-chevron-down"></i>
-        </a>
+        </Link>
     </div>
 </section>
             </main>
