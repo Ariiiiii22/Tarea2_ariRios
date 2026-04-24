@@ -34,7 +34,7 @@
     /* Colores principales */
     /* ERROR 1: El color primario no es el correcto, debería ser un cyan vibrante
        PISTA: Revisa el valor hexadecimal, el original era un tono cyan (#0ea5e9) */
-    --color-primary: #ff0000;          /* Cyan vibrante */
+    --color-primary: #0ea5e9;          /* Cyan vibrante */
     --color-primary-dark: #0284c7;
     --color-primary-light: #38bdf8;
     --color-secondary: #8b5cf6;         /* Violeta eléctrico */
@@ -102,7 +102,7 @@
     /* Z-index */
     /* ERROR 2: El header queda detrás del contenido al hacer scroll
        PISTA: El valor del z-index es muy bajo para un elemento fijo */
-    --z-fixed: 1;
+    --z-fixed: 100;
     --z-modal: 1000;
     
     /* Header */
@@ -166,7 +166,8 @@ button {
 }
 
 .section {
-    padding: var(--spacing-4xl) 0;
+    padding: var(--spacing-lg);
+    margin: 0 auto;
 }
 
 /* ========== TYPOGRAPHY ========== */
@@ -216,12 +217,14 @@ button {
        Esto hace que el hover y otros estados se animen suavemente */
     cursor: pointer;
     white-space: nowrap;
+    transition: all var(--transition-base);
 }
 
 .btn--primary {
     background: var(--gradient-primary);
     color: white;
     border: none;
+     box-shadow: var(--shadow-sm);
     /* ERROR 5: El botón primario no tiene profundidad ni efecto de brillo
        PISTA: Falta la propiedad que agrega sombras al elemento */
 }
@@ -282,6 +285,7 @@ button {
     /* ERROR 6: Los elementos del nav no están alineados verticalmente al centro
        PISTA: Falta una propiedad de flexbox que alinea items en el eje transversal */
     justify-content: space-between;
+    align-items: center;
     height: 100%;
 }
 
@@ -322,6 +326,8 @@ button {
     width: 0;
     height: 2px;
     background: var(--gradient-primary);
+     transition: width var(--transition-base);
+
     /* ERROR 7 (AVANZADO): La línea debajo del link aparece de golpe sin animación
        SOLUCIÓN: Falta la transición para la propiedad width
        Agregar: transition: width var(--transition-base);
@@ -426,6 +432,7 @@ button {
 
 .hero__buttons {
     display: flex;
+    gap: var(--spacing-md);
     /* ERROR 8: Los botones del hero están pegados sin espacio entre ellos
        PISTA: Falta la propiedad que define el espacio entre elementos flex */
     flex-wrap: wrap;
@@ -446,6 +453,7 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
+    animation: blob-animation 8s ease-in-out infinite;
     /* ERROR 9: El blob en el hero no tiene la animación de forma dinámica
        PISTA: Falta la propiedad animation que referencia a blob-animation */
     position: relative;
@@ -546,6 +554,7 @@ button {
 
 .interests__grid {
     display: grid;
+    grid-template-columns: repeat(3, 1fr);
     /* ERROR 10: Las cards de intereses no se muestran en 3 columnas, están apiladas
        PISTA: Falta la propiedad de CSS Grid que define las columnas */
     gap: var(--spacing-xl);
@@ -555,6 +564,7 @@ button {
 .interest__card {
     background: var(--color-bg-card);
     border: 1px solid var(--color-bg-tertiary);
+    border-radius: var(--radius-lg);
     /* ERROR 11: Las cards de intereses tienen esquinas puntiagudas en vez de redondeadas
        PISTA: Falta la propiedad border-radius */
     padding: var(--spacing-xl);
@@ -576,6 +586,7 @@ button {
        SOLUCIÓN: Falta la transición para la propiedad transform
        Agregar: transition: transform var(--transition-base);
        El pseudoelemento ::before necesita su propia transición para animar el scaleX */
+       transition: transform var(--transition-base);
 }
 
 .interest__card:hover {
@@ -776,6 +787,7 @@ button {
    Los selectores específicos como --github necesitan definir su propio color */
 .social__icon--github {
     background: rgba(255, 255, 255, 0.1);
+    color: var(--color-text-primary);
 }
 
 .social__icon--email {
@@ -818,6 +830,8 @@ button {
     /* ERROR 14: Los proyectos no se muestran en columnas, solo apilados
        PISTA: Falta definir cómo se distribuyen las columnas en el grid */
     display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
     gap: var(--spacing-xl);
 }
 
@@ -872,7 +886,7 @@ button {
    SOLUCIÓN: El selector está mal escrito, debería ser .project__card:hover .project__overlay
    El selector correcto utiliza :hover en el contenedor padre para afectar al hijo
    Cambiar project__card-hover por .project__card:hover */
-.project__card-hover .project__overlay {
+.project__card:hover .project__overlay {
     opacity: 1;
 }
 
@@ -1009,6 +1023,7 @@ button {
 }
 
 .contact__card {
+    background: var(--gradient-primary);
     /* ERROR 18: La card de contacto no tiene el fondo degradado
        PISTA: Falta la propiedad background con el gradiente primario */
     border-radius: var(--border-radius-xl);
@@ -1070,6 +1085,7 @@ button {
 }
 
 .footer__social {
+    display: flex;
     /* ERROR 16: Los iconos de redes sociales del footer están apilados verticalmente
        PISTA: Falta la propiedad display que permite alinear elementos en fila */
     gap: var(--spacing-md);
@@ -1079,6 +1095,7 @@ button {
     width: 45px;
     height: 45px;
     background: var(--color-bg-tertiary);
+    border-radius: 50%;
     /* ERROR 17: Los iconos de redes sociales son cuadrados en vez de círculos
        PISTA: Falta una propiedad de borde para hacer elementos circulares */
     display: flex;
