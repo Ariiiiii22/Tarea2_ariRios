@@ -56,49 +56,53 @@ export default function Header(){
             </header>
 
             <main className="main">
-                <section className="hero section" id="home">
-                    <div className="hero__container container">
-                        <div className="hero__content">
-                            <span className="hero__greeting">¡Hola! 👋 Soy</span>
-                            <h1 className="hero__title">Arantza Ilian Ríos Barrera</h1>
-                            <h2 className="hero__subtitle">
-                                <span className="highlight">Ingeniero de Software</span> en Crecimiento
-                            </h2>
-                            <p className="hero__description">
-                                Recién egresado de Tecnologías de la Información apasionado por crear 
-                                soluciones digitales innovadoras. Combino creatividad técnica con un 
-                                enfoque orientado a resultados para transformar ideas en código funcional.
-                            </p>
-                        
-                            <div className="hero__buttons">
-                                <a href="#projects" className="btn btn--primary">
-                                    <i className="fas fa-rocket"></i> Ver mis proyectos
-                                </a>
-                                <a href="#contact" className="btn btn--outline">
-                                    <i className="fas fa-envelope"></i> Contáctame
-                                </a>
-                            </div>
-                        </div>
-                        
-                        <div className="hero__image">
-                            <div className="hero__blob">
-                                <div className="hero__avatar">
-                                    <i className="fas fa-user-astronaut"></i>
-                                </div>
-                            </div>
-                            <div className="hero__decoration hero__decoration--1"></div>
-                            <div className="hero__decoration hero__decoration--2"></div>
-                            <div className="hero__decoration hero__decoration--3"></div>
-                        </div>
-                    </div>
-                    
-                    <div className="hero__scroll">
-                        <a href="#interests" className="hero__scroll-link">
-                            <span>Scroll</span>
-                            <i className="fas fa-chevron-down"></i>
-                        </a>
-                    </div>
-                </section>
+                <section className={styles.hero} id="home">
+    <div className={`container ${styles.hero__container}`}>
+        <div className={styles.hero__content}>
+            <span className={styles.hero__greeting}>¡Hola! 👋 Soy</span>
+            <h1 className={styles.hero__title}>Arantza Ilian Ríos Barrera</h1>
+
+            <h2 className={styles.hero__subtitle}>
+                <span className={styles.highlight}>Ingeniero de Software</span> en Crecimiento
+            </h2>
+
+            <p className={styles.hero__description}>
+                Recién egresado de Tecnologías de la Información apasionado por crear 
+                soluciones digitales innovadoras. Combino creatividad técnica con un 
+                enfoque orientado a resultados para transformar ideas en código funcional.
+            </p>
+
+            <div className={styles.hero__buttons}>
+                <a href="#projects" className={`${styles.btn} ${styles['btn--primary']}`}>
+                    <i className="fas fa-rocket"></i> Ver mis proyectos
+                </a>
+
+                <a href="#contact" className={`${styles.btn} ${styles['btn--outline']}`}>
+                    <i className="fas fa-envelope"></i> Contáctame
+                </a>
+            </div>
+        </div>
+
+        <div className={styles.hero__image}>
+            <div className={styles.hero__blob}>
+                <div className={styles.hero__avatar}>
+                    <i className="fas fa-user-astronaut"></i>
+                </div>
+            </div>
+
+            <div className={`${styles.hero__decoration} ${styles['hero__decoration--1']}`}></div>
+            <div className={`${styles.hero__decoration} ${styles['hero__decoration--2']}`}></div>
+            <div className={`${styles.hero__decoration} ${styles['hero__decoration--3']}`}></div>
+        </div>
+    </div>
+
+    <div className={styles.hero__scroll}>
+        <a href="#interests" className={styles.hero__scroll-Link}>
+            <span>Scroll</span>
+            <i className="fas fa-chevron-down"></i>
+        </a>
+    </div>
+</section>
             </main>
         </>
     );
