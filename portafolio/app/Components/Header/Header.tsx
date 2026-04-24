@@ -108,24 +108,24 @@ export default function Header(){
         <div className={`container ${styles.footer__container}`}>
             <div className={styles.footer__content}>
                 <div className={styles.footer__brand}>
-                    <a href="#" className={styles.footer__logo}>
+                    <Link href="#" className={styles.footer__logo}>
                         <span className={styles.logo__bracket}>&lt;</span>TuNombre<span className={styles.logo__bracket}>/&gt;</span>
-                    </a>
+                    </Link>
                     <p className={styles.footer__text}>
                         Gracias por visitar mi portfolio. ¡Espero que podamos trabajar juntos pronto!
                     </p>
                 </div>
                 
                 <div className={styles.footer__social}>
-                    <a href="https://linkedin.com/in/tu-perfil" target="_blank" rel="noopener noreferrer" className={styles.footer__social-Link} aria-label="LinkedIn">
+                    <Link href="https://linkedin.com/in/tu-perfil" target="_blank" rel="noopener noreferrer" className={styles.footer__social-Link} aria-label="LinkedIn">
                         <i className="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="https://github.com/tu-usuario" className={styles.footer__social-Link} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    </Link>
+                    <Link href="https://github.com/tu-usuario" className={styles.footer__social-Link} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                         <i className="fab fa-github"></i>
-                    </a>
-                    <a href="mailto:tu@email.com" className={styles.footer__social-Link} aria-label="Email">
+                    </Link>
+                    <Link href="mailto:tu@email.com" className={styles.footer__social-Link} aria-label="Email">
                         <i className="fas fa-envelope"></i>
-                    </a>
+                    </Link>
                 </div>
             </div>
             
