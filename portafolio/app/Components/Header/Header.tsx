@@ -5,8 +5,8 @@ let HeaderData:String = "Arantza Ilian Ríos Barrera"
 
 export default function Header(){
     return(
-        <header className={styles.header} id="header">
-        <nav className={`container ${styles.nav}`}>
+        <header className="header" id="header">
+        <nav className="nav container">
             <a href="#home" className="nav__logo">
                 <span className="logo__bracket">&lt;</span>TuNombre<span className="logo__bracket">/&gt;</span>
             </a>
